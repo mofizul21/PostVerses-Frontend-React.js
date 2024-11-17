@@ -21,11 +21,14 @@ export default function Login() {
         
         const res = await fetch(`${BASE_URL}/api/login`, {
             method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+            },
             body: JSON.stringify(formData),
         });
 
-        const data = await res.json();  
-        console.log('data: ', data);
+        const data = await res.json();
 
         if (data.errors) {
             setErrors(data.errors);

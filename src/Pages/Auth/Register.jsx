@@ -20,12 +20,11 @@ export default function Register() {
     async function handleRegister (e) {
         e.preventDefault();
 
-        console.log(formData);
-
         const res = await fetch(`${BASE_URL}/api/register`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                "Accept": "application/json",
             },
             body: JSON.stringify(formData),
         });
