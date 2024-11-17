@@ -7,6 +7,8 @@ import { BASE_URL } from "../../config";
 
 export default function Show() {
     const [post, setPost] = useState(null);
+    const [loading, setLoading] = useState(true);
+
     const navigate = useNavigate();
 
     const { id } = useParams();
@@ -18,6 +20,7 @@ export default function Show() {
 
         if (res.ok) {
             setPost(data.post);
+            setLoading(false);
         }
     }
 
@@ -44,12 +47,14 @@ export default function Show() {
 
     return (
         <>
-            {post ? (
+            {loading ? (
+                <div className="flex justify-center items-center min-h-screen">
+                    <div className="spinner w-10 h-10 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin"></div>
+                </div>
+            ) : post ? (
                 <>
-                    {/* Post Title */}
                     <h1 className="text-3xl font-bold text-center mb-4">{post.title}</h1>
 
-                    {/* Post Metadata */}
                     <div className="text-center mb-6">
                         <small className="text-sm text-gray-500 flex justify-center items-center">
                             <img
@@ -62,21 +67,17 @@ export default function Show() {
                         </small>
                     </div>
 
-                    {/* Post Content */}
                     <div className="max-w-3xl mx-auto bg-gray-800 text-white p-6 rounded-lg shadow-lg">
-                        {/* Post Image */}
                         <div className="mb-6">
                             <img
-                                src={`${ BASE_URL }/storage/${ post.image }`}
+                                    src={post.image ? `${ BASE_URL }/storage/${ post.image }` : '/fallback.jpg'}
                                 alt={post.title}
                                 className="w-full h-96 object-cover rounded-lg"
                             />
                         </div>
 
-                        {/* Post Body */}
                         <p className="text-gray-300 text-lg mb-6">{post.body}</p>
 
-                        {/* Conditional Buttons for Update and Delete */}
                         {user?.id === post.user_id && (
                             <div className="flex space-x-4">
                                 <Link
