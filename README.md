@@ -1,5 +1,5 @@
 # PostVerses - Blog Application
-PostVerses is a full-stack blog application designed to provide a feature-rich blogging experience. The frontend is built using React.js and leverages Vite for faster development and performance. The application has essential features like user authentication, CRUD post operations, user ownership permissions, and a customizable user profile.
+PostVerses is a full-stack blog application created with React.js & Laravel. The application has essential features like user authentication, CRUD post operations, user ownership permissions, and a customizable user profile.
 
 ## Screenshots
 ![app-preview](https://github.com/user-attachments/assets/676538eb-b37b-4621-be2e-431c59f476df)
