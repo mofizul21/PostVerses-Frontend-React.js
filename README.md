@@ -1,7 +1,9 @@
 # PostVerses - Blog Application
-PostVerses is a full-stack blog application designed to provide a feature-rich blogging experience. The frontend is built using React.js and leverages Vite for faster development and performance. The application comes with essential features like user authentication, CRUD operations for posts, user ownership permissions, and a customizable user profile.
+PostVerses is a full-stack blog application designed to provide a feature-rich blogging experience. The frontend is built using React.js and leverages Vite for faster development and performance. The application has essential features like user authentication, CRUD post operations, user ownership permissions, and a customizable user profile.
 
 ## Screenshots
+![app-preview](https://github.com/user-attachments/assets/676538eb-b37b-4621-be2e-431c59f476df)
+![add-blog](https://github.com/user-attachments/assets/aafcc8af-cddf-4451-aebb-14ad7d1326c1)
 
 
 ## Features
@@ -24,6 +26,7 @@ PostVerses is a full-stack blog application designed to provide a feature-rich b
 
 ## Clone the Repository
 `git clone https://github.com/mofizul21/PostVerses-Frontend-React.js`
+
 `cd PostVerses-Frontend-React.js`
 
 ## Setup
@@ -32,42 +35,3 @@ PostVerses is a full-stack blog application designed to provide a feature-rich b
 ### Start the Development Server:
 `npm run dev`
 
-## Project Structure
-frontend/
-┣ node_modules/
-┣ public/
-┃ ┣ author.png
-┃ ┣ fallback.jpg
-┃ ┣ favicon.svg
-┃ ┣ mofizul_blog.png
-┃ ┗ writing.jpg
-┣ src/
-┃ ┣ Context/
-┃ ┃ ┗ AppContext.jsx
-┃ ┣ Pages/
-┃ ┃ ┣ Auth/
-┃ ┃ ┃ ┣ Login.jsx
-┃ ┃ ┃ ┣ Profile.jsx
-┃ ┃ ┃ ┗ Register.jsx
-┃ ┃ ┣ Posts/
-┃ ┃ ┃ ┣ Create.jsx
-┃ ┃ ┃ ┣ Show.jsx
-┃ ┃ ┃ ┗ Update.jsx
-┃ ┃ ┣ About.jsx
-┃ ┃ ┣ Contact.jsx
-┃ ┃ ┣ Gallery.jsx
-┃ ┃ ┣ Home.jsx
-┃ ┃ ┗ Layout.jsx
-┃ ┣ App.css
-┃ ┣ App.jsx
-┃ ┣ config.js
-┃ ┗ main.jsx
-┣ .gitignore
-┣ eslint.config.js
-┣ index.html
-┣ package-lock.json
-┣ package.json
-┣ postcss.config.js
-┣ README.md
-┣ tailwind.config.js
-┗ vite.config.js
