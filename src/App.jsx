@@ -1,3 +1,4 @@
+// frontend\src\App.jsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useContext } from "react";
 import './App.css';
@@ -13,6 +14,7 @@ import Profile from "./Pages/Auth/Profile";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Gallery from "./Pages/Gallery";
+import Links from "./Pages/Auth/Links";
 
 export default function App() {
     const { user } = useContext(AppContext);
@@ -29,6 +31,7 @@ export default function App() {
                 <Route path="/login" element={user ? <Home /> : <Login />} />
                 <Route path="/create" element={user ? <Create /> : <Login />} />
                 <Route path="/profile" element={user ? <Profile /> : <Login />} />
+                <Route path="/links" element={user ? <Links /> : <Login />} />
                 <Route path="/posts/:id" element={<Show />} />
                 <Route path="/posts/update/:id" element={user ? <Update /> : <Login />} />
 

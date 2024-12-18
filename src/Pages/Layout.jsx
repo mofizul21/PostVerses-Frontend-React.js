@@ -1,3 +1,4 @@
+// frontend\src\Pages\Layout.jsx
 import { useContext } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { AppContext } from "../Context/AppContext";
